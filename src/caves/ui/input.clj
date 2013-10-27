@@ -1,8 +1,8 @@
 (ns caves.ui.input
-  (:use [caves.world.generation :only [random-world smooth-world]]
-        [caves.entities.player :only [move-player]]
-        [caves.ui.core :only [->UI]])
-  (:require [lanterna.screen :as s]))
+  (:require [caves.world.generation :refer [random-world smooth-world]]
+        [caves.entities.player :refer [move-player]]
+        [caves.ui.core :refer [->UI]]
+        [lanterna.screen :as s]))
 
 
 (defn reset-game [game]

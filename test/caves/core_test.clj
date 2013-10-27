@@ -1,7 +1,7 @@
 (ns caves.core-test
   (:import [caves.core UI World Game])
-  (:use clojure.test
-        caves.core))
+  (:require [clojure.test :refer :all]
+            caves.core))
 
 (defn current-ui [game]
   (:kind (last (:uis game))))

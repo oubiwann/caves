@@ -1,8 +1,8 @@
 (ns caves.entities.bunny
-  (:use [caves.entities.core :only [Entity get-id add-aspect]]
-        [caves.entities.aspects.destructible :only [Destructible]]
-        [caves.entities.aspects.mobile :only [Mobile move]]
-        [caves.world.core :only [find-empty-neighbor]]))
+  (:require [caves.entities.core :refer [Entity get-id add-aspect]]
+            [caves.entities.aspects.destructible :refer [Destructible]]
+            [caves.entities.aspects.mobile :refer [Mobile move]]
+            [caves.world.core :refer [find-empty-neighbor]]))
 
 
 (defrecord Bunny [id glyph color location hp max-hp name])

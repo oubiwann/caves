@@ -1,9 +1,9 @@
 (ns caves.core
-  (:use [caves.ui.core :only [->UI]]
-        [caves.ui.drawing :only [draw-game]]
-        [caves.entities.core :only [tick]]
-        [caves.ui.input :only [get-input process-input]])
-  (:require [lanterna.screen :as s]))
+  (:require [caves.ui.core :refer [->UI]]
+        [caves.ui.drawing :refer [draw-game]]
+        [caves.entities.core :refer [tick]]
+        [caves.ui.input :refer [get-input process-input]]
+        [lanterna.screen :as s]))
 
 
 ; Data Structures -------------------------------------------------------------

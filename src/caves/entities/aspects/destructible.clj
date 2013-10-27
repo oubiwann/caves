@@ -1,6 +1,6 @@
 (ns caves.entities.aspects.destructible
-  (:use [caves.entities.core :only [defaspect]]
-        [caves.entities.aspects.receiver :only [send-message-nearby]]))
+  (:require [caves.entities.core :refer [defaspect]]
+            [caves.entities.aspects.receiver :refer [send-message-nearby]]))
 
 
 (defaspect Destructible

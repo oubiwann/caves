@@ -1,9 +1,9 @@
 (ns caves.entities.silverfish
-  (:use [caves.entities.core :only [Entity get-id add-aspect]]
-        [caves.entities.aspects.destructible :only [Destructible]]
-        [caves.entities.aspects.mobile :only [Mobile move can-move?]]
-        [caves.world.core :only [get-entity-at get-tile-kind]]
-        [caves.coords :only [neighbors]]))
+  (:require [caves.entities.core :refer [Entity get-id add-aspect]]
+            [caves.entities.aspects.destructible :refer [Destructible]]
+            [caves.entities.aspects.mobile :refer [Mobile move can-move?]]
+            [caves.world.core :refer [get-entity-at get-tile-kind]]
+            [caves.coords :refer [neighbors]]))
 
 
 (defrecord Silverfish [id glyph color location hp max-hp name])

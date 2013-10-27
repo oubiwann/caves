@@ -1,6 +1,6 @@
 (ns caves.ui.drawing
-  (:use [caves.utils :only (map2d shear enumerate)])
-  (:require [lanterna.screen :as s]))
+  (:require [caves.utils :refer [map2d shear enumerate]]
+            [lanterna.screen :as s]))
 
 
 ; Definitions -----------------------------------------------------------------

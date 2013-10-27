@@ -1,5 +1,5 @@
 (ns caves.world.core
-  (:use [caves.coords :only [neighbors radial-distance]]))
+  (:require [caves.coords :refer [neighbors radial-distance]]))
 
 
 ; Constants -------------------------------------------------------------------

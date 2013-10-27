@@ -1,8 +1,9 @@
 (ns caves.entities.aspects.attacker
-  (:use [caves.entities.aspects.receiver :only [send-message]]
-        [caves.entities.aspects.destructible :only [Destructible take-damage
-                                                    defense-value]]
-        [caves.entities.core :only [defaspect]]))
+  (:require
+    [caves.entities.aspects.receiver :refer [send-message]]
+    [caves.entities.aspects.destructible :refer [Destructible take-damage
+                                                 defense-value]]
+    [caves.entities.core :refer [defaspect]]))
 
 
 (declare get-damage)

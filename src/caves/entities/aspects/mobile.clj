@@ -1,6 +1,6 @@
 (ns caves.entities.aspects.mobile
-  (:use [caves.entities.core :only [defaspect]]
-        [caves.world.core :only [is-empty?]]))
+  (:require [caves.entities.core :refer [defaspect]]
+            [caves.world.core :refer [is-empty?]]))
 
 
 (defaspect Mobile

@@ -1,13 +1,13 @@
 (ns caves.world.generation
-  (:use [clojure.set :only (union difference)]
-        [caves.entities.player :only [make-player]]
-        [caves.entities.lichen :only [make-lichen]]
-        [caves.entities.bunny :only [make-bunny]]
-        [caves.entities.silverfish :only [make-silverfish]]
-        [caves.world.core :only [tiles get-tile-from-tiles random-coordinate
-                                 world-size ->World tile-walkable?
-                                 find-empty-tile]]
-        [caves.coords :only [neighbors]]))
+  (:require [clojure.set :refer (union difference)]
+            [caves.entities.player :refer [make-player]]
+            [caves.entities.lichen :refer [make-lichen]]
+            [caves.entities.bunny :refer [make-bunny]]
+            [caves.entities.silverfish :refer [make-silverfish]]
+            [caves.world.core :refer [tiles get-tile-from-tiles random-coordinate
+                                      world-size ->World tile-walkable?
+                                      find-empty-tile]]
+            [caves.coords :refer [neighbors]]))
 
 
 ; Convenience -----------------------------------------------------------------

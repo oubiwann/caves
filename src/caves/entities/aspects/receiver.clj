@@ -1,6 +1,6 @@
 (ns caves.entities.aspects.receiver
-  (:use [caves.entities.core :only [defaspect]]
-        [caves.world.core :only [get-entities-around]]))
+  (:require [caves.entities.core :refer [defaspect]]
+            [caves.world.core :refer [get-entities-around]]))
 
 
 (defaspect Receiver
