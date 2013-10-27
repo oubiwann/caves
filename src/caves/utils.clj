@@ -1,13 +1,6 @@
 (ns caves.utils)
 
 
-; lolclojure
-(defn abs [i]
-  (if (neg? i)
-    (- i)
-    i))
-
-
 (defn map2d
   "Map a function across a two-dimensional sequence."
   [f s]

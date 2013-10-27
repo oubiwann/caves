@@ -1,10 +1,10 @@
 (ns caves.coords
-  (:use [caves.utils :only [abs]]))
+  (:require [clojure.math.numeric-tower :refer [abs]]))
 
 
 (defn radial-distance
   "Return the radial distance between two points.
-  
+
   There might be a better name for this, but in a nutshell:
 
       3333333
@@ -14,7 +14,7 @@
       3211123
       3222223
       3333333
-  
+
   "
   [[x1 y1] [x2 y2]]
   (max (abs (- x1 x2))
