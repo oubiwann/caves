@@ -24,16 +24,16 @@
   (case input
     :enter     (assoc game :uis [(->UI :win)])
     :backspace (assoc game :uis [(->UI :lose)])
-    \q         (assoc game :uis [])
+    \Q         (assoc game :uis [])
 
-    \h (update-in game [:world] move-player :w)
-    \j (update-in game [:world] move-player :s)
-    \k (update-in game [:world] move-player :n)
-    \l (update-in game [:world] move-player :e)
-    \y (update-in game [:world] move-player :nw)
-    \u (update-in game [:world] move-player :ne)
-    \b (update-in game [:world] move-player :sw)
-    \n (update-in game [:world] move-player :se)
+    \a (update-in game [:world] move-player :w)
+    \s (update-in game [:world] move-player :s)
+    \w (update-in game [:world] move-player :n)
+    \d (update-in game [:world] move-player :e)
+    \q (update-in game [:world] move-player :nw)
+    \e (update-in game [:world] move-player :ne)
+    \z (update-in game [:world] move-player :sw)
+    \c (update-in game [:world] move-player :se)
 
     \R (update-in game [:debug-flags :show-regions] not)
 
