@@ -11,11 +11,11 @@
 (defrecord Tile [kind glyph color])
 
 (def tiles
-  {:floor (->Tile :floor config/tile-floor :white)
-   :wall  (->Tile :wall  config/tile-wall :white)
-   :up    (->Tile :up    config/tile-up :magenta)
-   :down  (->Tile :down  config/tile-down :magenta)
-   :bound (->Tile :bound config/tile-bound :black)})
+  {:floor (apply ->Tile (concat [:floor] config/tile-floor))
+   :wall  (apply ->Tile (concat [:wall] config/tile-wall))
+   :up    (apply ->Tile (concat [:up] config/tile-up))
+   :down  (apply ->Tile (concat [:down] config/tile-down))
+   :bound (apply ->Tile (concat [:bound] config/tile-bound))})
 
 ; Convenience functions -------------------------------------------------------
 (defn get-tile-from-tiles [tiles [x y]]
