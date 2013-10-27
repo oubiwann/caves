@@ -32,3 +32,10 @@
 (def tile-up "^")
 (def tile-down "v")
 (def tile-bound "X")
+
+;; Player options
+(def player-char "@")
+(def player-color :white)
+(def player-hit-points 40)
+(def player-max-hit-points 40)
+(def player-attack-power 10)

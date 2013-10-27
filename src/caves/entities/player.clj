@@ -6,6 +6,7 @@
             [caves.entities.aspects.attacker :refer [Attacker attack]]
             [caves.entities.aspects.destructible :refer [Destructible]]
             [caves.coords :refer [destination-coords]]
+            [caves.config :as config]
             [caves.world.core :refer [get-entity-at]]))
 
 
@@ -24,12 +25,12 @@
 (defn make-player [location]
   (map->Player {:id :player
                 :name "player"
-                :glyph "@"
-                :color :white
+                :glyph config/player-char
+                :color config/player-color
                 :location location
-                :hp 40
-                :max-hp 40
-                :attack 10}))
+                :hp config/player-hit-points
+                :max-hp config/player-max-hit-points
+                :attack config/player-attack-power}))
 
 (defn move-player [world dir]
   (let [player (get-in world [:entities :player])
