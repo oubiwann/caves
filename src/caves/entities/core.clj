@@ -34,7 +34,7 @@
 
 (defn make-fnheads
   "Make a sequence of fnheads of of the given sequence of fnspecs.
-  
+
   A fnhead is a sequence of (name args) like you'd pass to defprotocol.  For
   example, this sequence of fnspecs:
 
@@ -81,7 +81,7 @@
   "Add an aspect to an entity type.
 
   This is similar to extend-type, with two differences:
- 
+
   * It must be used on a protocol defined with defaspect.
   * It will use the aspect's default function implementation for any functions
     not given.
