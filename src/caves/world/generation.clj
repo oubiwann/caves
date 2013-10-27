@@ -1,5 +1,6 @@
 (ns caves.world.generation
-  (:require [clojure.set :refer (union difference)]
+  (:require [clojure.set :refer [union difference]]
+            [caves.config :as config]
             [caves.entities.player :refer [make-player]]
             [caves.entities.lichen :refer [make-lichen]]
             [caves.entities.bunny :refer [make-bunny]]
@@ -93,7 +94,7 @@
 
 (defn get-smoothed-tile [block]
   (let [tile-counts (frequencies (map :kind block))
-        floor-threshold 5
+        floor-threshold config/smoothness
         floor-count (get tile-counts :floor 0)
         result (if (>= floor-count floor-threshold)
                  :floor
