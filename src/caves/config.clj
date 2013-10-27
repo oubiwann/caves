@@ -10,3 +10,16 @@
 ;;          enough space to place all the entities
 (def smoothness 6)
 
+;; Key bindings for player movement
+(def key-west \a)
+(def key-south \s)
+(def key-north \w)
+(def key-east \d)
+(def key-north-west \q)
+(def key-north-east \e)
+(def key-south-west \z)
+(def key-south-east \c)
+
+;; Key bindings for game controls
+(def key-quit \Q)
+(def key-reveal-zones \R)
