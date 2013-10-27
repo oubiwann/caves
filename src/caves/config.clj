@@ -25,3 +25,10 @@
 (def key-insta-lose :backspace)
 (def key-quit \Q)
 (def key-reveal-zones \R)
+
+;; Tile representations
+(def tile-floor " ")
+(def tile-wall "#")
+(def tile-up "^")
+(def tile-down "v")
+(def tile-bound "X")

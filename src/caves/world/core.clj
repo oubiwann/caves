@@ -1,5 +1,6 @@
 (ns caves.world.core
-  (:require [caves.coords :refer [neighbors radial-distance]]))
+  (:require [caves.coords :refer [neighbors radial-distance]]
+            [caves.config :as config]))
 
 
 ; Constants -------------------------------------------------------------------
@@ -10,12 +11,11 @@
 (defrecord Tile [kind glyph color])
 
 (def tiles
-  {:floor (->Tile :floor "." :white)
-   :wall  (->Tile :wall  "#" :white)
-   :up    (->Tile :up    "<" :white)
-   :down  (->Tile :down  ">" :white)
-   :bound (->Tile :bound "X" :black)})
-
+  {:floor (->Tile :floor config/tile-floor :white)
+   :wall  (->Tile :wall  config/tile-wall :white)
+   :up    (->Tile :up    config/tile-up :magenta)
+   :down  (->Tile :down  config/tile-down :magenta)
+   :bound (->Tile :bound config/tile-bound :black)})
 
 ; Convenience functions -------------------------------------------------------
 (defn get-tile-from-tiles [tiles [x y]]
@@ -29,7 +29,6 @@
   "Return whether a (normal) entity can walk over this type of tile."
   [tile]
   (#{:floor :up :down} (:kind tile)))
-
 
 ; Querying a world ------------------------------------------------------------
 (defn get-tile [world coord]
@@ -73,7 +72,6 @@
   (let [candidates (filter #(is-empty? world %) (neighbors coord))]
     (when (seq candidates)
       (rand-nth candidates))))
-
 
 (defn check-tile
   "Check that the tile at the destination passes the given predicate."
